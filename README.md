@@ -1,6 +1,6 @@
 # python1 feladatsor
 
-1. Töltsd le a repositoryt a saját gépedre zip formátumban.
+1. Töltsd le ezt a repositoryt a saját gépedre zip formátumban.
 2. Bontsd ki a zip fájlt könytárként.
 3. Egy terminálban lépj be ebbe a könytárba.
 4. Futtasd a pytest programot.
@@ -13,12 +13,12 @@
 12. A feladat beadásához a python1.py fájlt töltsd fel ebbe a github repositoryba.
 13. Ne felejtsd el a Commit gomb megnyomását.
 
-    Ha még nincs pytest letültve a gépedre akkor:
-        pip install pytest, vagy <br>
-        python -m pip install pytest, vagy <br>
+#### Ha még nincs pytest letöltve a gépedre akkor:
+        pip install pytest, vagy
+        python -m pip install pytest, vagy
         python3 -m pip install pytest
 
-     A pytest futtatása:
-        pytest, vagy <br>
-        python -m pytest <br>
+#### A pytest futtatása:
+        pytest, vagy
+        python -m pytest, vagy
         python3 -m pytest
