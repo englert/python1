@@ -1,32 +1,25 @@
 # --- START OF FILE test_python1.py ---
+import os
 import pytest
 import math
+import random
+import json
 from unittest.mock import patch
-from python1 import (
-    osszead,
-    kisebb,
-    nagyobb,
-    szamtani_kozep,
-    negyzet_kerulet,
-    negyzet_terulet,
-    teglalap_kerulet,
-    teglalap_terulet,
-    kulonbseg,
-    maradek,
-    paros,
-    kettovel_oszthato,
-    harommal_oszthato,
-    hettel_oszthato,
-    kocka_terfogat,
-    teglatest_terfogat,
-    derekszogu_haromszog_terulet,
-    derekszogu_haromszog_atfogo,
-    negyzet_atloja,
-    teglalap_atloja,
-    abszolut,
-    kor_kerulete,
-    kor_terulete,
-)
+
+
+if not os.path.exists('python1.py'):
+    with open('tasks.json') as json_data:
+        lista = json.load(json_data)
+    
+    random.shuffle(lista)
+    text = "'''\n\n\n\n#--------------------------\n'''".join(lista)
+    
+    with open('python1.py', 'w') as f:
+        f.write("#--------------------------\n'''")
+        f.writelines(text)
+        f.write("'''\n\n\n\n#=====================================")
+        
+from python1 import *
 
 def test_osszead():
     assert osszead(2, 3) == 5
@@ -34,7 +27,7 @@ def test_osszead():
     assert osszead(0, 0) == 0
     assert osszead(2.5, 3.5) == 6
 
-    @patch('python1.sum')
+    @patch('builtins.sum')
     def test_sum_not_called(mock_sum):
         osszead(1, 2)
         mock_sum.assert_not_called()
@@ -50,7 +43,7 @@ def test_kisebb():
     assert kisebb(3.5, 2.5) == 2.5
 
 
-    @patch('python1.min')
+    @patch('builtins.min')
     def test_min_not_called(mock_min):
         kisebb(1, 2)
         mock_min.assert_not_called()
@@ -66,7 +59,7 @@ def test_nagyobb():
     assert nagyobb(3.5, 2.5) == 3.5
 
 
-    @patch('python1.max')
+    @patch('builtins.max')
     def test_max_not_called(mock_max):
         nagyobb(1, 2)
         mock_max.assert_not_called()
