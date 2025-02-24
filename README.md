@@ -1,4 +1,4 @@
-# python1
+# python1 feladatsor
 
 1. Töltsd le a repositoryt a saját gépedre zip formátumban.
 2. Bontsd ki a zip fájlt könytárként.
