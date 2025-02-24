@@ -14,11 +14,11 @@
 13. Ne felejtsd el a Commit gomb megnyomását.
 
     Ha még nincs pytest letültve a gépedre akkor:
-        pip install pytest, vagy
-        python -m pip install pytest, vagy
+        pip install pytest, vagy <br>
+        python -m pip install pytest, vagy <br>
         python3 -m pip install pytest
 
      A pytest futtatása:
-        pytest, vagy
-        python -m pytest
+        pytest, vagy <br>
+        python -m pytest <br>
         python3 -m pytest
