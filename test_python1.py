@@ -6,7 +6,7 @@ import random
 import json
 from unittest.mock import patch
 
-
+pwd = os.getcwd()
 if not os.path.exists('python1.py'):
     with open('tasks.json', 'r', encoding='utf-8') as json_data:
         lista = json.load(json_data)
@@ -17,8 +17,8 @@ if not os.path.exists('python1.py'):
     with open('python1.py', 'w',encoding='utf-8') as f:
         f.write("#--------------------------\n'''")
         f.writelines(text)
-        f.write("'''\n\n\n\n#=====================================")
-        
+        f.write("'''\n\n\n\n#======================================================================================================================"+pwd)        
+
 from python1 import *
 
 def test_osszead():
